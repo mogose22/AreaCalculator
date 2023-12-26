@@ -1,0 +1,10 @@
+﻿.git/
+.idea/
+
+AreaCalculator.sln.DotSettings.user
+global.json
+
+AreaCalculator/bin/
+AreaCalculator/obj/
+AreaCalculator.Tests/bin/
+AreaCalculator.Tests/obj/
