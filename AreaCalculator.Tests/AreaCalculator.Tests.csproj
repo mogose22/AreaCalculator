@@ -18,7 +18,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\AreaCalculator\AreaCalculator.csproj" />
+        <ProjectReference Include="..\AreaCalculator\AreaCalculator.csproj"/>
     </ItemGroup>
 
 </Project>

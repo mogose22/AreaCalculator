@@ -1,4 +1,3 @@
-using System;
 using AreaCalculator.Figures;
 using NUnit.Framework;
 
@@ -13,7 +12,7 @@ public class CircleTests
         var ex = Assert.Throws<ArgumentException>(() => { _ = new Circle(radius); });
         Assert.That(ex?.Message, Is.EqualTo(ExceptionMessages.RadiusLessThanZero + $"{radius}"));
     }
-    
+
     [TestCase(0, 0)]
     [TestCase(1, Math.PI)]
     [TestCase(2, Math.PI * 4)]
