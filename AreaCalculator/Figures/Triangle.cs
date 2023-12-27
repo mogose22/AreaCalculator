@@ -17,6 +17,10 @@ public class Triangle : IFigure
     /// </exception>
     public Triangle(double firstSideLength, double secondSideLength, double thirdSideLength)
     {
+        _firstSideLength = firstSideLength;
+        _secondSideLength = secondSideLength;
+        _thirdSideLength = thirdSideLength;
+
         if (OneOfSidesLessThanZero)
             throw new ArgumentException(ExceptionMessages.SideOfTriangleLessThanZero
                                         + $"{firstSideLength}, {secondSideLength}, {thirdSideLength}");
@@ -26,10 +30,6 @@ public class Triangle : IFigure
                                         secondSideLength + thirdSideLength <= firstSideLength))
             throw new ArgumentException(ExceptionMessages.TriangleDoesntExist
                                         + $"{firstSideLength}, {secondSideLength}, {thirdSideLength}");
-
-        _firstSideLength = firstSideLength;
-        _secondSideLength = secondSideLength;
-        _thirdSideLength = thirdSideLength;
     }
 
     private bool OneOfSidesLessThanZero => _firstSideLength < 0 || _secondSideLength < 0 || _thirdSideLength < 0;

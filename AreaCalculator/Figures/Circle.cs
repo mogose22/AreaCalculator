@@ -11,10 +11,10 @@ public class Circle : IFigure
     /// <exception cref="ArgumentException">Radius of circle cannot be less than zero.</exception>
     public Circle(double radius)
     {
+        _radius = radius;
+
         if (radius < 0)
             throw new ArgumentException(new string(ExceptionMessages.RadiusLessThanZero + $"{radius}"));
-
-        _radius = radius;
     }
 
     /// <summary>
